@@ -1,19 +1,18 @@
 <template>
-  <v-layout column align-center justify-space-around>
-    <section>
-      <h1 class="display-4">Hey, there!</h1>
-      <h2 class="mt-3 headline text-xs-center">Need help choosing a new car?</h2>
+  <v-layout text-xs-center column align-center justify-space-around>
+    <section class="mt-5">
+      <h1 class="font-italic display-4">Hey, there!</h1>
+      <h2 class="mt-5 headline text-xs-center">Need help choosing a new car?</h2>
     </section>
-    <v-btn outline large color="accent" class="mb-5">Let's Get Started</v-btn>
+    <router-link :to="{name: 'survey', params: {stage: 1}}">
+      <v-btn outline large color="accent" class="mb-5">Let's Get Started</v-btn>
+    </router-link>
   </v-layout>
 </template>
 
 <script>
 export default {
   name: 'Landing',
-  components: {
-    
-  }
 }
 </script>
 
